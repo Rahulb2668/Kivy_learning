@@ -23,7 +23,7 @@ class MainApp(App):
         ]
 
         for rows in buttons:
-            h_layout = BoxLayout
+            h_layout = BoxLayout()
             for label in rows:
                 button = Button(
                     text = label,
@@ -65,7 +65,7 @@ class MainApp(App):
     def on_solution(self, instance):
         text = self.solution.text
         if text:
-            solution = str(eval(self.button.text))
+            solution = str(eval(self.solution.text))
             self.solution.text = solution
 
 
